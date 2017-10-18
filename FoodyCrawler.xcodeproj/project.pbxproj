@@ -52,6 +52,7 @@
 		0DBEF1881F95D0A00019A5C0 /* FoodyCrawler */ = {
 			isa = PBXGroup;
 			children = (
+				0DE41DCB1F970DA200AC2E89 /* Models */,
 				0DBEF1891F95D0A00019A5C0 /* AppDelegate.swift */,
 				0DBEF18B1F95D0A00019A5C0 /* ViewController.swift */,
 				0DBEF18D1F95D0A00019A5C0 /* Assets.xcassets */,
@@ -59,6 +60,14 @@
 				0DBEF1921F95D0A00019A5C0 /* Info.plist */,
 			);
 			path = FoodyCrawler;
+			sourceTree = "<group>";
+		};
+		0DE41DCB1F970DA200AC2E89 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -288,6 +297,7 @@
 				0DBEF1971F95D0A00019A5C0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
