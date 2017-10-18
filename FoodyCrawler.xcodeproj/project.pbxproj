@@ -11,6 +11,8 @@
 		0DBEF18C1F95D0A00019A5C0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBEF18B1F95D0A00019A5C0 /* ViewController.swift */; };
 		0DBEF18E1F95D0A00019A5C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DBEF18D1F95D0A00019A5C0 /* Assets.xcassets */; };
 		0DBEF1911F95D0A00019A5C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DBEF18F1F95D0A00019A5C0 /* Main.storyboard */; };
+		0DE41DCD1F970F8200AC2E89 /* PlacesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE41DCC1F970F8200AC2E89 /* PlacesList.swift */; };
+		C7E9183983C3AEA6D2F2EEB4 /* Pods_FoodyCrawler.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE7A31425DD3DA7C295F374C /* Pods_FoodyCrawler.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,10 @@
 		0DBEF18D1F95D0A00019A5C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0DBEF1901F95D0A00019A5C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0DBEF1921F95D0A00019A5C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0DE41DCC1F970F8200AC2E89 /* PlacesList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacesList.swift; sourceTree = "<group>"; };
+		B843D0EB0B9E1E864041CAD9 /* Pods-FoodyCrawler.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodyCrawler.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FoodyCrawler/Pods-FoodyCrawler.debug.xcconfig"; sourceTree = "<group>"; };
+		FBE06331715CFC7575E889A7 /* Pods-FoodyCrawler.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodyCrawler.release.xcconfig"; path = "Pods/Target Support Files/Pods-FoodyCrawler/Pods-FoodyCrawler.release.xcconfig"; sourceTree = "<group>"; };
+		FE7A31425DD3DA7C295F374C /* Pods_FoodyCrawler.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FoodyCrawler.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,17 +33,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7E9183983C3AEA6D2F2EEB4 /* Pods_FoodyCrawler.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B444245B3B80BDF9A2A40F4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FE7A31425DD3DA7C295F374C /* Pods_FoodyCrawler.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		0DBEF17D1F95D0A00019A5C0 = {
 			isa = PBXGroup;
 			children = (
 				0DBEF1881F95D0A00019A5C0 /* FoodyCrawler */,
 				0DBEF1871F95D0A00019A5C0 /* Products */,
+				70866633B7CE472A32D43A34 /* Pods */,
+				0B444245B3B80BDF9A2A40F4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -65,9 +82,19 @@
 		0DE41DCB1F970DA200AC2E89 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				0DE41DCC1F970F8200AC2E89 /* PlacesList.swift */,
 			);
 			name = Models;
 			path = Model;
+			sourceTree = "<group>";
+		};
+		70866633B7CE472A32D43A34 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B843D0EB0B9E1E864041CAD9 /* Pods-FoodyCrawler.debug.xcconfig */,
+				FBE06331715CFC7575E889A7 /* Pods-FoodyCrawler.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,9 +104,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0DBEF1951F95D0A00019A5C0 /* Build configuration list for PBXNativeTarget "FoodyCrawler" */;
 			buildPhases = (
+				AD2D386CB1807C2977B8F777 /* [CP] Check Pods Manifest.lock */,
 				0DBEF1821F95D0A00019A5C0 /* Sources */,
 				0DBEF1831F95D0A00019A5C0 /* Frameworks */,
 				0DBEF1841F95D0A00019A5C0 /* Resources */,
+				4CC3FAE0C9CDB8B1D5216E70 /* [CP] Embed Pods Frameworks */,
+				2333B89F874291A1FBBEE9E2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -136,12 +166,61 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2333B89F874291A1FBBEE9E2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FoodyCrawler/Pods-FoodyCrawler-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4CC3FAE0C9CDB8B1D5216E70 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FoodyCrawler/Pods-FoodyCrawler-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AD2D386CB1807C2977B8F777 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0DBEF1821F95D0A00019A5C0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				0DBEF18C1F95D0A00019A5C0 /* ViewController.swift in Sources */,
+				0DE41DCD1F970F8200AC2E89 /* PlacesList.swift in Sources */,
 				0DBEF18A1F95D0A00019A5C0 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -254,6 +333,7 @@
 		};
 		0DBEF1961F95D0A00019A5C0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B843D0EB0B9E1E864041CAD9 /* Pods-FoodyCrawler.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -267,6 +347,7 @@
 		};
 		0DBEF1971F95D0A00019A5C0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FBE06331715CFC7575E889A7 /* Pods-FoodyCrawler.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
