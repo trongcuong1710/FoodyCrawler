@@ -7,4 +7,5 @@ target 'FoodyCrawler' do
 
   # Pods for FoodyCrawler
   pod 'Freddy'
+  pod 'Alamofire', '~> 4.5'
 end

@@ -7,3 +7,14 @@
 //
 
 import Foundation
+import Freddy
+
+struct PlacesList: JSONDecodable {
+  let total: Int
+  var items = [PlaceItem]()
+
+  init(json: JSON) throws {
+    total = try json.getInt(at: "Total")
+    items = try json.decodedArray(at: "Items")
+  }
+}
