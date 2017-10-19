@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Alamofire
 
 protocol Exportable {
   var name: String { get }
@@ -18,5 +19,6 @@ protocol Exportable {
 }
 
 protocol ExportService {
-  func export(items: [Exportable])
+  typealias ExportCallback = (Result<Bool>) -> Void
+  func export(items: [Exportable], callback: @escaping ExportCallback)
 }

@@ -16,6 +16,6 @@ protocol FoodyService {
   var category: Categories { get }
   var items: [PlaceItem] { get }
 
-  init(foodyAuthUDID: String, foodyAuth: String)
+  init(foodyAuthUDID: String, foodyAuth: String, city: Cities, category: Categories)
   func crawl(callback: @escaping CrawlCallback)
 }

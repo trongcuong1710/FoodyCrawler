@@ -10,14 +10,9 @@ import Foundation
 
 let MAX_RETRIES = 5
 
-class FoodyFoodAtBinhDuongService: FoodyService {
-  var city: Cities {
-    return .BinhDuong
-  }
-
-  var category: Categories {
-    return .Food
-  }
+class DefaultFoodyService: FoodyService {
+  let city: Cities
+  let category: Categories
 
   private(set) var items = [PlaceItem]()
   private var itemsCount = 12
@@ -27,9 +22,11 @@ class FoodyFoodAtBinhDuongService: FoodyService {
   private let foodyAuthUDID: String
   private let foodyAuth: String
 
-  required init(foodyAuthUDID: String, foodyAuth: String) {
+  required init(foodyAuthUDID: String, foodyAuth: String, city: Cities, category: Categories) {
     self.foodyAuthUDID = foodyAuthUDID
     self.foodyAuth = foodyAuth
+    self.city = city
+    self.category = category
   }
 
   func crawl(callback: @escaping CrawlCallback) {

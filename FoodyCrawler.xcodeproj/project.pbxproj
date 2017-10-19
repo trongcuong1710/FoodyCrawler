@@ -20,12 +20,12 @@
 		0DE41DDE1F97304900AC2E89 /* FoodyApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE41DDD1F97304900AC2E89 /* FoodyApiRequest.swift */; };
 		0DE41DE01F9730E200AC2E89 /* ApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE41DDF1F9730E200AC2E89 /* ApiRequest.swift */; };
 		0DE41DE31F9742BB00AC2E89 /* ParseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE41DE21F9742BB00AC2E89 /* ParseHelper.swift */; };
-		0DE41DE51F974B2D00AC2E89 /* FoodyFoodAtBinhDuongService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE41DE41F974B2D00AC2E89 /* FoodyFoodAtBinhDuongService.swift */; };
 		0DE41DE71F98827100AC2E89 /* ApplicationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE41DE61F98827100AC2E89 /* ApplicationService.swift */; };
 		0DE41DE91F98851C00AC2E89 /* DefaultApplicationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE41DE81F98851C00AC2E89 /* DefaultApplicationService.swift */; };
 		0DE41DEB1F988B0400AC2E89 /* ExportService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE41DEA1F988B0400AC2E89 /* ExportService.swift */; };
 		0DE41DED1F988B1C00AC2E89 /* CSVExportService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE41DEC1F988B1C00AC2E89 /* CSVExportService.swift */; };
 		0DE41DF01F989DDC00AC2E89 /* Int+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE41DEF1F989DDC00AC2E89 /* Int+Random.swift */; };
+		0DE41DF21F98A5BD00AC2E89 /* DefaultFoodService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE41DF11F98A5BD00AC2E89 /* DefaultFoodService.swift */; };
 		C7E9183983C3AEA6D2F2EEB4 /* Pods_FoodyCrawler.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE7A31425DD3DA7C295F374C /* Pods_FoodyCrawler.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,12 +45,12 @@
 		0DE41DDD1F97304900AC2E89 /* FoodyApiRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodyApiRequest.swift; sourceTree = "<group>"; };
 		0DE41DDF1F9730E200AC2E89 /* ApiRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiRequest.swift; sourceTree = "<group>"; };
 		0DE41DE21F9742BB00AC2E89 /* ParseHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseHelper.swift; sourceTree = "<group>"; };
-		0DE41DE41F974B2D00AC2E89 /* FoodyFoodAtBinhDuongService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodyFoodAtBinhDuongService.swift; sourceTree = "<group>"; };
 		0DE41DE61F98827100AC2E89 /* ApplicationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationService.swift; sourceTree = "<group>"; };
 		0DE41DE81F98851C00AC2E89 /* DefaultApplicationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultApplicationService.swift; sourceTree = "<group>"; };
 		0DE41DEA1F988B0400AC2E89 /* ExportService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExportService.swift; sourceTree = "<group>"; };
 		0DE41DEC1F988B1C00AC2E89 /* CSVExportService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSVExportService.swift; sourceTree = "<group>"; };
 		0DE41DEF1F989DDC00AC2E89 /* Int+Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int+Random.swift"; sourceTree = "<group>"; };
+		0DE41DF11F98A5BD00AC2E89 /* DefaultFoodService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultFoodService.swift; sourceTree = "<group>"; };
 		B843D0EB0B9E1E864041CAD9 /* Pods-FoodyCrawler.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodyCrawler.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FoodyCrawler/Pods-FoodyCrawler.debug.xcconfig"; sourceTree = "<group>"; };
 		FBE06331715CFC7575E889A7 /* Pods-FoodyCrawler.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodyCrawler.release.xcconfig"; path = "Pods/Target Support Files/Pods-FoodyCrawler/Pods-FoodyCrawler.release.xcconfig"; sourceTree = "<group>"; };
 		FE7A31425DD3DA7C295F374C /* Pods_FoodyCrawler.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FoodyCrawler.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -128,7 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				0DE41DD71F97188400AC2E89 /* FoodyService.swift */,
-				0DE41DE41F974B2D00AC2E89 /* FoodyFoodAtBinhDuongService.swift */,
+				0DE41DF11F98A5BD00AC2E89 /* DefaultFoodService.swift */,
 				0DE41DE61F98827100AC2E89 /* ApplicationService.swift */,
 				0DE41DE81F98851C00AC2E89 /* DefaultApplicationService.swift */,
 				0DE41DEA1F988B0400AC2E89 /* ExportService.swift */,
@@ -302,6 +302,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0DE41DED1F988B1C00AC2E89 /* CSVExportService.swift in Sources */,
+				0DE41DF21F98A5BD00AC2E89 /* DefaultFoodService.swift in Sources */,
 				0DE41DD11F97132900AC2E89 /* PlaceItem.swift in Sources */,
 				0DE41DCF1F97127700AC2E89 /* Cities.swift in Sources */,
 				0DBEF18C1F95D0A00019A5C0 /* ViewController.swift in Sources */,
@@ -309,7 +310,6 @@
 				0DE41DCD1F970F8200AC2E89 /* PlacesList.swift in Sources */,
 				0DE41DD81F97188400AC2E89 /* FoodyService.swift in Sources */,
 				0DBEF18A1F95D0A00019A5C0 /* AppDelegate.swift in Sources */,
-				0DE41DE51F974B2D00AC2E89 /* FoodyFoodAtBinhDuongService.swift in Sources */,
 				0DE41DD51F9715AD00AC2E89 /* Categories.swift in Sources */,
 				0DE41DEB1F988B0400AC2E89 /* ExportService.swift in Sources */,
 				0DE41DF01F989DDC00AC2E89 /* Int+Random.swift in Sources */,

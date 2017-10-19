@@ -20,6 +20,7 @@ class ViewController: NSViewController {
     // Do any additional setup after loading the view.
     button.target = self
     button.action = #selector(crawl)
+    foodyAuthUDIDTextField.becomeFirstResponder()
   }
 
   func crawl() {
@@ -27,21 +28,29 @@ class ViewController: NSViewController {
     let auth = foodyAuthTextField.stringValue
 
     if udid.isEmpty || auth.isEmpty {
-      showError(title: "Argument Missing!!!", message: "You must provide UDID and Auth!!!")
+      showAlert(title: "Argument Missing!!!", message: "You must provide UDID and Auth!!!", style: .warning)
       return
     }
 
-    service.crawl(foodyAuthUDID: udid, foodyAuth: auth) { _ in }
+    service.crawl(foodyAuthUDID: udid, foodyAuth: auth) { [weak self] result in
+      guard let `self` = self else { return }
+      switch result {
+      case .failure(let error):
+        self.showAlert(title: "Crawl Failed!!!", message: error.localizedDescription, style: .warning)
+      case .success:
+        self.showAlert(title: "Crawl Successfully!!!", message: "Successfully crawl foody data", style: .informational)
+      }
+    }
   }
 }
 
 extension NSViewController {
-  func showError(title: String, message: String) {
+  func showAlert(title: String, message: String, style: NSAlertStyle) {
     let alert = NSAlert()
     alert.messageText = title
     alert.informativeText = message
     alert.addButton(withTitle: "OK")
-    alert.alertStyle = .warning
+    alert.alertStyle = style
 
     alert.beginSheetModal(for: self.view.window!, completionHandler: nil)
   }

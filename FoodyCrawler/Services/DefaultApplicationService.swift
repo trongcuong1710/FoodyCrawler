@@ -21,7 +21,11 @@ class DefaultApplicationService: ApplicationService {
   }
 
   private(set) lazy var foodyServices: [FoodyService] = {
-    return [FoodyFoodAtBinhDuongService(foodyAuthUDID: self.foodyAuthUDID, foodyAuth: self.foodyAuth)]
+    return [DefaultFoodyService(foodyAuthUDID: self.foodyAuthUDID, foodyAuth: self.foodyAuth, city: .BinhDuong, category: .Food),
+            DefaultFoodyService(foodyAuthUDID: self.foodyAuthUDID, foodyAuth: self.foodyAuth, city: .BinhDuong, category: .Travel),
+            DefaultFoodyService(foodyAuthUDID: self.foodyAuthUDID, foodyAuth: self.foodyAuth, city: .BinhDuong, category: .Shop),
+            DefaultFoodyService(foodyAuthUDID: self.foodyAuthUDID, foodyAuth: self.foodyAuth, city: .BinhDuong, category: .Entertain),
+            DefaultFoodyService(foodyAuthUDID: self.foodyAuthUDID, foodyAuth: self.foodyAuth, city: .BinhDuong, category: .Service)]
   }()
 
   func crawl(foodyAuthUDID: String, foodyAuth: String, callback: @escaping Callback) {
@@ -46,9 +50,14 @@ class DefaultApplicationService: ApplicationService {
       if currentIndex <= foodyServices.count - 1 {
         crawl(foodyAuthUDID: foodyAuthUDID, foodyAuth: foodyAuth, callback: callback)
       } else {
-        exportService.export(items: self.items)
-        callback(.success(true))
+        exportData(callback: callback)
       }
+    }
+  }
+
+  private func exportData(callback: @escaping Callback) {
+    exportService.export(items: self.items) { result in
+      callback(result)
     }
   }
 }
