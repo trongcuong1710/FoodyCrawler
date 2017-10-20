@@ -12,6 +12,5 @@ import Alamofire
 protocol ApplicationService {
   typealias Callback = (Result<Bool>) -> ()
 
-  var foodyServices: [FoodyService] { get }
-  func crawl(foodyAuthUDID: String, foodyAuth: String, callback: @escaping Callback)
+  func crawl(foodyAuthUDID: String, foodyAuth: String, city: Cities, callback: @escaping Callback)
 }

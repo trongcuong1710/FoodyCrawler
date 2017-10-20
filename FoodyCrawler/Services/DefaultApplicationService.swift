@@ -15,22 +15,26 @@ class DefaultApplicationService: ApplicationService {
   private var currentIndex = 0
   private var items = [PlaceItem]()
   private let exportService: ExportService
+  private var city = Cities.HCM
+  private var foodyServices = [FoodyService]()
 
   init(exportService: ExportService = CSVExportService()) {
     self.exportService = exportService
   }
 
-  private(set) lazy var foodyServices: [FoodyService] = {
-    return [DefaultFoodyService(foodyAuthUDID: self.foodyAuthUDID, foodyAuth: self.foodyAuth, city: .BinhDuong, category: .Food),
-            DefaultFoodyService(foodyAuthUDID: self.foodyAuthUDID, foodyAuth: self.foodyAuth, city: .BinhDuong, category: .Travel),
-            DefaultFoodyService(foodyAuthUDID: self.foodyAuthUDID, foodyAuth: self.foodyAuth, city: .BinhDuong, category: .Shop),
-            DefaultFoodyService(foodyAuthUDID: self.foodyAuthUDID, foodyAuth: self.foodyAuth, city: .BinhDuong, category: .Entertain),
-            DefaultFoodyService(foodyAuthUDID: self.foodyAuthUDID, foodyAuth: self.foodyAuth, city: .BinhDuong, category: .Service)]
-  }()
+  private func setCity(_ city: Cities) {
+    self.city = city
+    foodyServices = [DefaultFoodyService(foodyAuthUDID: foodyAuthUDID, foodyAuth: foodyAuth, city: city, category: .Food),
+                     DefaultFoodyService(foodyAuthUDID: foodyAuthUDID, foodyAuth: foodyAuth, city: city, category: .Travel),
+                     DefaultFoodyService(foodyAuthUDID: foodyAuthUDID, foodyAuth: foodyAuth, city: city, category: .Shop),
+                     DefaultFoodyService(foodyAuthUDID: foodyAuthUDID, foodyAuth: foodyAuth, city: city, category: .Entertain),
+                     DefaultFoodyService(foodyAuthUDID: foodyAuthUDID, foodyAuth: foodyAuth, city: city, category: .Service)]
+  }
 
-  func crawl(foodyAuthUDID: String, foodyAuth: String, callback: @escaping Callback) {
+  func crawl(foodyAuthUDID: String, foodyAuth: String, city: Cities, callback: @escaping Callback) {
     self.foodyAuthUDID = foodyAuthUDID
     self.foodyAuth = foodyAuth
+    setCity(city)
 
     let service = foodyServices[currentIndex]
     service.crawl { [weak self] result in
@@ -48,7 +52,7 @@ class DefaultApplicationService: ApplicationService {
 
       currentIndex += 1
       if currentIndex <= foodyServices.count - 1 {
-        crawl(foodyAuthUDID: foodyAuthUDID, foodyAuth: foodyAuth, callback: callback)
+        crawl(foodyAuthUDID: foodyAuthUDID, foodyAuth: foodyAuth, city: city, callback: callback)
       } else {
         exportData(callback: callback)
       }

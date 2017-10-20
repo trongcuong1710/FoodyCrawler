@@ -28,8 +28,8 @@ struct PlaceItem: JSONDecodable, Exportable {
   init(json: JSON) throws {
     name = try json.getString(at: "Name")
     address = try json.getString(at: "Address")
-    lat = try json.getDouble(at: "Latitude")
-    lng = try json.getDouble(at: "Longitude")
+    lat = (try? json.getDouble(at: "Latitude")) ?? 0
+    lng = (try? json.getDouble(at: "Longitude")) ?? 0
   }
 
   mutating func setCity(_ city: String) {

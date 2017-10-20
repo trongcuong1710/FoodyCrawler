@@ -12,6 +12,7 @@ class ViewController: NSViewController {
   @IBOutlet fileprivate weak var button: NSButton!
   @IBOutlet fileprivate weak var foodyAuthUDIDTextField: NSTextField!
   @IBOutlet fileprivate weak var foodyAuthTextField: NSTextField!
+  @IBOutlet fileprivate weak var cityComboBox: CityComboBox!
 
   private var service: ApplicationService = DefaultApplicationService()
 
@@ -26,13 +27,21 @@ class ViewController: NSViewController {
   func crawl() {
     let udid = foodyAuthUDIDTextField.stringValue
     let auth = foodyAuthTextField.stringValue
+    let cityComboBoxSelectedIndex = cityComboBox.indexOfSelectedItem
+
+    if cityComboBoxSelectedIndex == -1 {
+      showAlert(title: "Invalid City!!!", message: "You must select a valid city to crawl.", style: .warning)
+      return
+    }
 
     if udid.isEmpty || auth.isEmpty {
       showAlert(title: "Argument Missing!!!", message: "You must provide UDID and Auth!!!", style: .warning)
       return
     }
 
-    service.crawl(foodyAuthUDID: udid, foodyAuth: auth) { [weak self] result in
+    let city = Cities.allCities[cityComboBoxSelectedIndex]
+
+    service.crawl(foodyAuthUDID: udid, foodyAuth: auth, city: city) { [weak self] result in
       guard let `self` = self else { return }
       switch result {
       case .failure(let error):

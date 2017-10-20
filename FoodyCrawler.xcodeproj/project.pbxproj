@@ -26,6 +26,7 @@
 		0DE41DED1F988B1C00AC2E89 /* CSVExportService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE41DEC1F988B1C00AC2E89 /* CSVExportService.swift */; };
 		0DE41DF01F989DDC00AC2E89 /* Int+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE41DEF1F989DDC00AC2E89 /* Int+Random.swift */; };
 		0DE41DF21F98A5BD00AC2E89 /* DefaultFoodService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE41DF11F98A5BD00AC2E89 /* DefaultFoodService.swift */; };
+		0DE41DF51F99DDEF00AC2E89 /* CityComboBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE41DF41F99DDEF00AC2E89 /* CityComboBox.swift */; };
 		C7E9183983C3AEA6D2F2EEB4 /* Pods_FoodyCrawler.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE7A31425DD3DA7C295F374C /* Pods_FoodyCrawler.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +52,7 @@
 		0DE41DEC1F988B1C00AC2E89 /* CSVExportService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSVExportService.swift; sourceTree = "<group>"; };
 		0DE41DEF1F989DDC00AC2E89 /* Int+Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int+Random.swift"; sourceTree = "<group>"; };
 		0DE41DF11F98A5BD00AC2E89 /* DefaultFoodService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultFoodService.swift; sourceTree = "<group>"; };
+		0DE41DF41F99DDEF00AC2E89 /* CityComboBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityComboBox.swift; sourceTree = "<group>"; };
 		B843D0EB0B9E1E864041CAD9 /* Pods-FoodyCrawler.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodyCrawler.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FoodyCrawler/Pods-FoodyCrawler.debug.xcconfig"; sourceTree = "<group>"; };
 		FBE06331715CFC7575E889A7 /* Pods-FoodyCrawler.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodyCrawler.release.xcconfig"; path = "Pods/Target Support Files/Pods-FoodyCrawler/Pods-FoodyCrawler.release.xcconfig"; sourceTree = "<group>"; };
 		FE7A31425DD3DA7C295F374C /* Pods_FoodyCrawler.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FoodyCrawler.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -97,6 +99,7 @@
 		0DBEF1881F95D0A00019A5C0 /* FoodyCrawler */ = {
 			isa = PBXGroup;
 			children = (
+				0DE41DF31F99DDD800AC2E89 /* Controls */,
 				0DE41DEE1F989DC800AC2E89 /* Extensions */,
 				0DE41DE11F9742A900AC2E89 /* Helpers */,
 				0DE41DDC1F972E1800AC2E89 /* Networks */,
@@ -168,6 +171,14 @@
 				0DE41DEF1F989DDC00AC2E89 /* Int+Random.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		0DE41DF31F99DDD800AC2E89 /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+				0DE41DF41F99DDEF00AC2E89 /* CityComboBox.swift */,
+			);
+			path = Controls;
 			sourceTree = "<group>";
 		};
 		70866633B7CE472A32D43A34 /* Pods */ = {
@@ -308,6 +319,7 @@
 				0DBEF18C1F95D0A00019A5C0 /* ViewController.swift in Sources */,
 				0DE41DDB1F97197700AC2E89 /* Queue.swift in Sources */,
 				0DE41DCD1F970F8200AC2E89 /* PlacesList.swift in Sources */,
+				0DE41DF51F99DDEF00AC2E89 /* CityComboBox.swift in Sources */,
 				0DE41DD81F97188400AC2E89 /* FoodyService.swift in Sources */,
 				0DBEF18A1F95D0A00019A5C0 /* AppDelegate.swift in Sources */,
 				0DE41DD51F9715AD00AC2E89 /* Categories.swift in Sources */,
