@@ -683,11 +683,11 @@
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="FoodyCrawler" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="255"/>
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="174"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xNi-dU-k2n">
-                                <rect key="frame" x="14" y="222" width="122" height="17"/>
+                                <rect key="frame" x="14" y="108" width="122" height="17"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="FOODY.AUTH.UDID" id="2dx-D9-j6a">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -695,7 +695,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nzy-eo-cin">
-                                <rect key="frame" x="142" y="219" width="322" height="22"/>
+                                <rect key="frame" x="142" y="105" width="322" height="22"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="KCf-eb-Xm2">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -703,7 +703,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="177-yY-YRr">
-                                <rect key="frame" x="14" y="189" width="87" height="17"/>
+                                <rect key="frame" x="14" y="75" width="87" height="17"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="FOODY.AUTH" id="6UE-ms-iVN">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -711,7 +711,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Af1-OM-Xs9">
-                                <rect key="frame" x="142" y="186" width="322" height="22"/>
+                                <rect key="frame" x="142" y="72" width="322" height="22"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="jVI-D3-bFZ">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -719,7 +719,7 @@
                                 </textFieldCell>
                             </textField>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="3hS-AE-jg5">
-                                <rect key="frame" x="10" y="123" width="460" height="51"/>
+                                <rect key="frame" x="10" y="9" width="460" height="51"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="fe3-g5-jRJ"/>
                                 </constraints>
@@ -728,32 +728,60 @@
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                             </button>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BTn-D3-XvA">
+                                <rect key="frame" x="14" y="141" width="28" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="City" id="f5u-Pk-IUU">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <comboBox verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mbb-iE-kjF" customClass="CityComboBox" customModule="FoodyCrawler" customModuleProvider="target">
+                                <rect key="frame" x="142" y="136" width="325" height="26"/>
+                                <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" completes="NO" numberOfVisibleItems="5" id="thw-9Q-Ad3">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    <objectValues>
+                                        <string>Item 1</string>
+                                        <string>Item 2</string>
+                                        <string>Item 3</string>
+                                    </objectValues>
+                                </comboBoxCell>
+                            </comboBox>
                         </subviews>
                         <constraints>
                             <constraint firstItem="177-yY-YRr" firstAttribute="top" secondItem="xNi-dU-k2n" secondAttribute="bottom" constant="16" id="1ZS-9P-dD0"/>
-                            <constraint firstItem="xNi-dU-k2n" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="16" id="5LP-FH-MOZ"/>
+                            <constraint firstAttribute="bottom" secondItem="3hS-AE-jg5" secondAttribute="bottom" constant="16" id="Cjj-hu-qHO"/>
                             <constraint firstItem="Af1-OM-Xs9" firstAttribute="centerY" secondItem="177-yY-YRr" secondAttribute="centerY" id="DAD-Rr-QLK"/>
                             <constraint firstItem="3hS-AE-jg5" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="16" id="DQ8-bR-mbr"/>
                             <constraint firstItem="3hS-AE-jg5" firstAttribute="top" secondItem="Af1-OM-Xs9" secondAttribute="bottom" constant="16" id="GHN-lN-57C"/>
+                            <constraint firstAttribute="trailing" secondItem="Mbb-iE-kjF" secondAttribute="trailing" constant="16" id="LGH-eo-v8x"/>
+                            <constraint firstItem="BTn-D3-XvA" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="16" id="MoJ-uB-ytJ"/>
+                            <constraint firstItem="xNi-dU-k2n" firstAttribute="top" secondItem="BTn-D3-XvA" secondAttribute="bottom" constant="16" id="SAw-Z3-csh"/>
                             <constraint firstItem="nzy-eo-cin" firstAttribute="leading" secondItem="xNi-dU-k2n" secondAttribute="trailing" constant="8" id="Sgg-KZ-F4T"/>
                             <constraint firstAttribute="trailing" secondItem="Af1-OM-Xs9" secondAttribute="trailing" constant="16" id="Vtw-Wf-LQW"/>
+                            <constraint firstItem="Mbb-iE-kjF" firstAttribute="leading" secondItem="nzy-eo-cin" secondAttribute="leading" id="dJt-NO-D3X"/>
                             <constraint firstAttribute="trailing" secondItem="nzy-eo-cin" secondAttribute="trailing" constant="16" id="emU-Gb-gav"/>
                             <constraint firstItem="177-yY-YRr" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="16" id="lya-Wq-Qbe"/>
+                            <constraint firstItem="BTn-D3-XvA" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="16" id="n4B-PJ-jE0"/>
                             <constraint firstItem="nzy-eo-cin" firstAttribute="centerY" secondItem="xNi-dU-k2n" secondAttribute="centerY" id="nak-cF-ij0"/>
                             <constraint firstItem="Af1-OM-Xs9" firstAttribute="leading" secondItem="nzy-eo-cin" secondAttribute="leading" id="nlh-8b-oPz"/>
                             <constraint firstAttribute="trailing" secondItem="3hS-AE-jg5" secondAttribute="trailing" constant="16" id="q8O-Op-O9x"/>
                             <constraint firstItem="xNi-dU-k2n" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="16" id="rqU-rN-Oic"/>
+                            <constraint firstItem="Mbb-iE-kjF" firstAttribute="centerY" secondItem="BTn-D3-XvA" secondAttribute="centerY" id="xWs-Fg-yq7"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="button" destination="3hS-AE-jg5" id="Va7-Lq-EzW"/>
+                        <outlet property="cityComboBox" destination="Mbb-iE-kjF" id="IM2-Xl-nSh"/>
                         <outlet property="foodyAuthTextField" destination="Af1-OM-Xs9" id="nbt-MQ-MUX"/>
                         <outlet property="foodyAuthUDIDTextField" destination="nzy-eo-cin" id="uoc-j3-kFb"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="722.5"/>
+            <point key="canvasLocation" x="75" y="835.5"/>
         </scene>
     </scenes>
 </document>
