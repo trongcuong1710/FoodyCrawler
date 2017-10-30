@@ -51,7 +51,7 @@ class DefaultFoodyService: FoodyService {
     retriesCount += 1
 
     if retriesCount <= MAX_RETRIES {
-      let delayTime = Int.random(range: 1...5)
+      let delayTime = Int.random(range: 5...10)
       NSLog("Will retry after: \(delayTime)")
       DispatchQueue.main.asyncAfter(deadline: .now() + TimeInterval(delayTime)) {
         NSLog("Attemp to retry, count: \(self.retriesCount)")
@@ -75,7 +75,7 @@ class DefaultFoodyService: FoodyService {
     if currentPage < totalPages {
       currentPage += 1
 
-      let delayTime = Int.random(range: 1...5)
+      let delayTime = Int.random(range: 5...10)
       NSLog("Crawl next page after: \(delayTime)")
       DispatchQueue.main.asyncAfter(deadline: .now() + TimeInterval(delayTime)) {
         self.crawl(callback: callback)
